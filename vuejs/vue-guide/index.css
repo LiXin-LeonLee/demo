@@ -1,0 +1,13 @@
+div[id^="app-"] {
+    width: 50%;
+    min-height: 30px;
+    padding: 5px;
+    margin: 10px auto;
+    border: solid 1px #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 0px #23061766;
+}
+
+div[id^="app-"]::after {
+    content: "";
+}

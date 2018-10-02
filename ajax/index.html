@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <meta charset="utf-8">
+    <style>
+        #wrap {
+            margin: 0 auto;
+            padding: 10px;
+            width: 40%;
+            min-width: 400px;
+            border: 1px solid #24242488;
+            background-color: #f7f7f7;
+        }
+
+        #showPane {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 20%;
+            min-width: 200px;
+            background-color: #00000088;
+            color: #fff;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div>
+            <h3>当前域</h3>
+            <p>Origin：
+                <span id="currentOrigin"></span>
+            </p>
+        </div>
+
+        <hr>
+        <div>
+            <h3>跨域限制</h3>
+            <p>GET：http://127.0.0.1:3000/ajax</p>
+            <button onclick="sendAjax('http://127.0.0.1:3000/ajax')">Send AJAX</button>
+            <p>GET：http://127.0.0.1:3001/ajax</p>
+            <button onclick="sendAjax('http://127.0.0.1:3001/ajax')">Send AJAX</button>
+            <p>GET：http://127.0.0.2:3000/ajax</p>
+            <button onclick="sendAjax('http://127.0.0.2:3000/ajax')">Send AJAX</button>
+        </div>
+        <hr>
+        <div>
+            <h3>解决方案 - CORS</h3>
+            <p>GET：http://127.0.0.1:3001/ajaxcors</p>
+            <button onclick="sendAjax('http://127.0.0.1:3001/ajaxcors')">Send AJAX</button>
+            <p>GET：http://127.0.0.2:3000/ajaxcors</p>
+            <button onclick="sendAjax('http://127.0.0.2:3000/ajaxcors')">Send AJAX</button>
+        </div>
+        <div id="showPane">
+            <p>请求结果：</p>
+            <p id="showResponse">show here ...</p>
+        </div>
+    </div>
+    <script src="./common.js"></script>
+</body>
+
+</html>
